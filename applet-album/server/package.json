@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "nodemon app.js",
-    "start": "pm2 start process.json"
+    "start": "pm2 start process.json",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +21,11 @@
     "multiparty": "^4.1.2",
     "qcloud_cos": "^1.0.6",
     "read-chunk": "^2.0.0",
-    "shortid": "^2.2.6"
+    "shortid": "^2.2.6",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"
-  }
+  },
+  "snyk": true
 }
